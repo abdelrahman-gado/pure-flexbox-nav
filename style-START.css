@@ -10,9 +10,29 @@ body {
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
 
-img {
+.fa-twitter {
     display: inline-block;
     width:1em;
+}
+
+.fa-facebook {
+    display: inline-block;
+    width:1em;
+}
+
+.fa-github {
+    display: inline-block;
+    width:1em;
+}
+
+.fa-instagram {
+    display: inline-block;
+    width:1em;
+}
+
+img {
+    width: 100%;
+    overflow: auto;
 }
 
 a {
@@ -49,7 +69,7 @@ a:hover {
 }
 
 .flex-nav ul li {
-    flex: 1;
+    flex: 3;
 }
 
 .flex-nav .social {
@@ -71,9 +91,64 @@ a:hover {
 
 }
 
+section, footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 100;
+}
+
+.toggleNav {
+    display: none;
+}
+
 
 @media all and (max-width: 500px) {
     .flex-nav ul li {
         flex-basis: 100%;
     }
+
+    /* Flex Container */
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Flex Items */
+    .wrapper > * {
+        order: 9999;
+    }
+
+
+    .flex-nav {
+        order: 1;
+    }
+
+    .toggleNav {
+        display: block;
+    }
+
+    .flex-nav ul {
+        display: none;
+    }
+
+    .flex-nav ul.open {
+        display: flex;
+    }
+
+    .top {
+        order: 2;
+    }
+
+    .details {
+        order: 3;
+    }
+
+    .signup {
+        order: 4;
+    }
+
+
 }

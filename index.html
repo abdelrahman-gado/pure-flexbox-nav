@@ -1,37 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Flexbox Nav</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style-START.css">
+  <meta charset="UTF-8">
+  <title>Flexbox Nav</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style-START.css">
 </head>
+
 <body>
 
-    <div class="wrapper">
-        <nav class="flex-nav">
-            <ul>
-                <li><a href="#">Item 01</a></li>
-                <li><a href="#">Item 02</a></li>
-                <li><a href="#">Item 03</a></li>
-                <li><a href="#">Item 04</a></li>
-                <li><a href="#">Item 05</a></li>
-                <li><a href="#">Item 06</a></li>
-                <li class="social">
-                    <a href="http://twitter.com/"><img class="fa fa-twitter" src="https://img.icons8.com/material/24/000000/twitter-squared.png"></a>
-                  </li>
-                  <li class="social">
-                    <a href="http://facebook.com/"><img class="fa fa-facebook" src="https://img.icons8.com/material-outlined/24/000000/facebook-new.png"></a>
-                  </li>
-                  <li class="social">
-                    <a href="http://github.com/"><img class="fa fa-github" src="https://img.icons8.com/ios-glyphs/24/000000/github.png"></a>
-                  </li>
-                  <li class="social">
-                    <a href="http://instagram.com/"><img class="fa fa-instagram" src="https://img.icons8.com/material/24/000000/instagram-new--v1.png"></a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+  <div class="wrapper">
+
+    <header class="top">
+      <h1><a href="#">What The Flexbox?!</a></h1>
+    </header>
+
+    <nav class="flex-nav">
+      <a href="#" class="toggleNav">Menu</a>
+      <ul>
+        <li><a href="#">Item 01</a></li>
+        <li><a href="#">Item 02</a></li>
+        <li><a href="#">Item 03</a></li>
+        <li><a href="#">Item 04</a></li>
+        <li><a href="#">Item 05</a></li>
+        <li><a href="#">Item 06</a></li>
+        <li class="social">
+          <a href="http://twitter.com/"><img class="fa-twitter"
+              src="https://img.icons8.com/material/24/000000/twitter-squared.png"></a>
+        </li>
+        <li class="social">
+          <a href="http://facebook.com/"><img class="fa-facebook"
+              src="https://img.icons8.com/material-outlined/24/000000/facebook-new.png"></a>
+        </li>
+        <li class="social">
+          <a href="http://github.com/"><img class="fa-github"
+              src="https://img.icons8.com/ios-glyphs/24/000000/github.png"></a>
+        </li>
+        <li class="social">
+          <a href="http://instagram.com/"><img class="fa-instagram"
+              src="https://img.icons8.com/material/24/000000/instagram-new--v1.png"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <img src="http://www.lorempixel.com/1000/600/abstract">
+    </section>
+
+    <section class="details">
+      <p>A simple video course to help you master Flexbox.</p>
+      <p>Sign up today to grab all the videos and exerices!</p>
+    </section>
+
+    <section class="signup">
+      <form action="" class="signup">
+        <input type="text" placeholder="Tour Name">
+        <input type="email" placeholder="Email Address">
+        <input type="submit" value="Sign me up!">
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; Wes Bos</p>
+    </footer>
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.js">
+    
+    $(function() {
+      $('.toggleNav').on('click',function() {
+        $('.flex-nav ul').toggleClass('open');
+      });
+    });
+
+  </script>
 
 </body>
+
 </html>
